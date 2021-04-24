@@ -1,0 +1,158 @@
+/*----------------------------------header----------------------------------------*/
+.cabecalhoPrincipal .container{
+    display: flex; /* coloca os elementos um do lado do outro */
+    align-items: center; /* deixa os elementos centralizados, verticalmente */
+    justify-content: space-between; /*pega o bloco vazio e o coloca entre os elementos*/
+}
+
+.cabecalhoPrincipal-nav{
+    -ms-display: flex;  
+    display: flex;
+}
+/*----------------------------------header-----------------------------------------*/
+
+/*----------------------------------principal--------------------------------------*/
+
+.conteudoPrincipal-cursos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    /* justify-content: flex-start; */
+}
+
+
+.conteudoPrincipal-cursos-link{
+    width: 23%;
+    margin: 1%; 
+}
+
+.conteudoPrincipal-cursos-link:nth-child(4n){
+    margin-right: 0;
+}
+
+.conteudoPrincipal-cursos-link:nth-child(4n+1){
+    margin-left: 0;
+}
+
+/*----------------------------------principal--------------------------------------*/
+
+/*--------------------------------------Sobre--------------------------------------*/
+.videoSobre .container{
+    display: flex;
+}
+
+.videoSobre-sobre{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2; /* Pega o espaço que esta sobrando na tela e ocupa ele */
+}
+
+.videoSobre-sobre-list{
+    flex-grow: 1;
+}
+
+.videoSobre-video{
+    flex-grow: 1;
+    flex-shrink: 2; /* quando diminui a tela, o elemento com shirink vai diminuir 2x mais que o outro elemento posicionado ao lado dele */
+}
+/*--------------------------------------Sobre--------------------------------------*/
+
+/*----------------------------------footer-----------------------------------------*/
+
+.rodapePrincipal-navMap-list{
+    display: flex;
+    /* flex-direction: column;
+    flex-wrap: wrap; */
+    flex-flow: column wrap; /* faz a mesma coisa que as duas linhas de cima */
+    height: 260px;
+}
+
+.rodapePrincipal-patrocinadores .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rodapePrincipal-patrocinadores-list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin-right: 5%;
+    
+}
+
+.rodapePrincipal-contatoForm{
+    display: flex;
+    width: 25%;
+}
+
+.rodapePrincipal-contatoForm-fieldset{
+    display: flex; /* deixa os elementos filhos alinhados e com mesmo tamanho*/
+}
+/*----------------------------------footer--------------------------------------*/
+
+/*----------------------------------mobile--------------------------------------*/
+
+@media (max-width: 768px){
+    .cabecalhoPrincipal .container{
+        flex-direction: column; 
+        align-items: initial;
+        text-align: center;
+    }
+
+    .cabecalhoPrincipal-nav{
+        flex-direction: column;
+    }
+
+    .conteudoPrincipal-cursos{
+        display: flex;
+        flex-direction: column;
+    }
+    .conteudoPrincipal-cursos-link{
+        width: auto;
+    }
+
+    .conteudoPrincipal-cursos-link:nth-child(4n){
+        margin: 1%;
+    }
+
+    .videoSobre .container{
+        flex-direction: column;
+        width: auto ;
+    }
+
+    .videoSobre-video{
+        margin: 0 auto;
+    }
+
+    .rodapePrincipal-navMap-list{
+        height: auto;
+        text-align: center; 
+    }
+
+    .rodapePrincipal-patrocinadores .container{
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .rodapePrincipal-patrocinadores-list{
+        width: 90%;
+        margin: 0;
+        align-items: center;
+        justify-content: space-between;
+    }
+ 
+
+    .rodapePrincipal-contatoForm{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cabecalhoPrincipal-nav-link-app{
+        order: -1;
+    }
+}
+/*----------------------------------mobile--------------------------------------*/
